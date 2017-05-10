@@ -1,0 +1,20 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "b8d4aee9-b2a0-4bd9-b7df-82a41f1e559d",
+  "alias": "MultiPageWizWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+
+  "preconfiguredEntries": [{
+    "groupId": "b8d4aee9-b2a0-4bd9-b7df-82a41f1e559d",
+    "group": { "default": "Under Development" },
+    "title": { "default": "MultiPageWiz" },
+    "description": { "default": "Welcome to a multi-page wizard for sharepoint. Click &#39;Start&#39; to begin!" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "MultiPageWiz"
+    }
+  }]
+}

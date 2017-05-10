@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/multiPageWiz/MultiPageWizWebPart.js",
+      "manifest": "./src/webparts/multiPageWiz/MultiPageWizWebPart.manifest.json",
+      "outputPath": "./dist/multi-page-wiz.bundle.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "multiPageWizStrings": "webparts/multiPageWiz/loc/{locale}.js"
+  }
+}

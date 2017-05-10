@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "libraryName": "multi-page-wiz",
+    "framework": "react",
+    "version": "1.0.2",
+    "libraryId": "e6c55875-df5e-4c70-971b-65869e87a6af"
+  }
+}
