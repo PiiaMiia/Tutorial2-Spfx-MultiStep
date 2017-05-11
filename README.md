@@ -1,7 +1,7 @@
 # Adding input fields to wizard. Tutorial 2
 
 This tutorial covers the following:
-- How to add input fiends to wizard
+- How to add input fields to wizard
 - How to fetch data from SharePoint using REST services
 
 ### Building the code
@@ -13,11 +13,15 @@ npm i -g gulp
 gulp serve
 ```
 
+### Description
+
 This is a follow-up tutorial to [SharePoint Multi-Step Wizard Using React and TypeScript. Tutorial 1](https://github.com/PiiaMiia/Tutorial1-Spfx-MultiStep). So be sure to do those steps first.
 
 Now you should have created all the components you want to use in your wizard and integrated them to the main. The next step is to add input fields and bind them to the data in SharePoint. Make sure you are now running your application in the SharePoint online test environment, because the REST service won’t work in local. If you are not sure how to do so, please refer to the section “Preview the web part in SharePoint” [here](https://dev.office.com/sharepoint/docs/spfx/web-parts/get-started/build-a-hello-world-web-part). Also, please create a list (my list’s name will be ‘Clients’) in your SharePoint tenant to test the app.
 
 My wizard is going to retrieve a specific list from SharePoint through the SharePoint REST service. Follow this link for more information: https://dev.office.com/sharepoint/docs/sp-add-ins/working-with-lists-and-list-items-with-rest.
+
+### Tutorial
 
 1.	First, let’s create a dropdown menu to StepOne with the ```<select>``` tag. As we don’t have any options yet, the dropdown is empty.
 
