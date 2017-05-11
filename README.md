@@ -140,8 +140,8 @@ constructor(props) {
   }
 );
 ```
-4.7 Now when you test the app, still nothing appears. Not to worry. This is because you haven't told StepOne to render the dropdown options. To fix this, let's refer to step 3 first. You created a method that renders the ```<option>``` tag. Place the generic component in the html between the <select> tags (ike this: ```<select>{items}</select>```). Now test your app and your list items should appear in the dropdown!
+4.7 Now when you test the app, still nothing appears. Not to worry. This is because you haven't told StepOne to render the dropdown options. To fix this, let's refer to step 3 first. You created a method that renders the ```<option>``` tag. Place the generic component in the html between the ```<select>``` tags (like this: ```<select>{items}</select>```). Now test your app and your list items should appear in the dropdown!
 
-![alt text](media/fig1.png "fig1")
+![alt text](/media/fig1.png "fig1")
 
 This was one example of using SharePoint REST service to connect to data in SharePoint. There are many other options available. In the next tutorial I will show how to bind the input to a state and pass it on to other components. Also, how to create an Azure function that creates Office 365 Groups in SharePoint and how to trigger it from your app.
