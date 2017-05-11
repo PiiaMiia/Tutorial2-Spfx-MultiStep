@@ -48,7 +48,7 @@ This creates the ```<option>``` tag that will later be rendered between the ```<
 4. To put this aside for a minute, we first need to get the clients from the list. For this, we need to make a method under StepOne that would retrieve that list from your SharePoint account and put the list items in the dropdown. This is a bit complicated so I will break it into parts.
 
 4.1. First, you need to make sure you have all the props you need. Go to MultiPageWizWebPart.tsx under the multiPageWiz folder. Currently it holds the code for the property pane. You can use it later to create configuration settings for your app, but right now you can delete or ignore everything that is below getPropertyPaneConfiguration(). Important place here is the render method. This doesn’t exactly render anything, but passes on properties to multiPageWiz.tsx.
-In order to pass on the properties, they must be defined in the IMultiPageWizProps.ts in the components folder and IMultiPageWizWebPart.ts in the multiPageWiz folder. Paste this code to both (<b>but make sure the interface class name corresponds to the file name!<b/>):
+In order to pass on the properties, they must be defined in the IMultiPageWizProps.ts in the components folder and IMultiPageWizWebPart.ts in the multiPageWiz folder. Paste this code to both (but make sure the interface class name corresponds to the file name!):
 
 ```
 import { HttpClient, SPHttpClient } from '@microsoft/sp-http';
