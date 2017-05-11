@@ -7,7 +7,11 @@ export default class SpGroup extends React.Component<IMultiPageWizProps, void> {
   public render(): JSX.Element {
     return (
       <div>
-        <Main />
+        <Main
+          httpClinet={this.props.httpClient}
+          spHttpClient={this.props.spHttpClient}
+          siteUrl={this.props.siteUrl}
+        />
       </div>
     );
   }

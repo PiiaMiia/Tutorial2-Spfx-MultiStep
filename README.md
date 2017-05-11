@@ -50,7 +50,7 @@ This creates the ```<option>``` tag that will later be rendered between the ```<
 4.1. First, you need to make sure you have all the props you need. Go to MultiPageWizWebPart.tsx under the multiPageWiz folder. Currently it holds the code for the property pane. You can use it later to create configuration settings for your app, but right now you can delete or ignore everything that is below getPropertyPaneConfiguration(). Important place here is the render method. This doesn’t exactly render anything, but passes on properties to main.
 In order to pass on the properties, they must be defined in the IMultiPageWizProps.ts in the components folder. Paste this code:
 
-```bash
+```
 import { HttpClient, SPHttpClient } from '@microsoft/sp-http';
 
 export interface IMultiPageWizWebPartProps {
@@ -62,7 +62,7 @@ spHttpClient: SPHttpClient;
 
 Then amend the MultiPageWizWebPart.tsx render method like this:
 
-```bash
+```
 …
 MultiPageWiz,
 {
@@ -77,7 +77,7 @@ siteUrl:  this.context.pageContext.web.absoluteUrl
 
 4.3. Then create a method that uses the REST service for reading the clients in the list. I called my method readItems():
 
-```bash
+```
 private readItems(): void {
 this.props.spHttpClient.get(
 `${this.props.siteUrl}/_api/web/lists/getbytitle('Clients')/items?$select=Title’,
@@ -91,12 +91,12 @@ SPHttpClient.configurations.v1, {
 ```
 
 Note that this.props.siteUrl is the url of the site you are currently at.
-‘Clients’ in the API is the name of my list that I am fetching. /items?$select=Title fetches the title column in the list. That’s sufficient , as we only need client names.
+‘Clients’ in the API is the name of my list that I am fetching. ```/items?$select=Title``` fetches the title column in the list. That’s sufficient , as we only need client names.
 HttpClientConfigurations.v1 provides standard predefined HttpClientConfiguration objects for use with the HttpClient class. You can read about the sp-http classes here.
 
 4.4. Then add a response. Simply put it after spHttpClient.get:
 
-```bash
+```
 .then((response: SPHttpClientResponse): Promise<{ value: IListItem[] }> => {
 return response.json();
 })

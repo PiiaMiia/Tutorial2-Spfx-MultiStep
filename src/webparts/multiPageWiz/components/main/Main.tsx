@@ -24,11 +24,16 @@ export default class Main extends React.Component<any, any> {
                  <div className={styles.helloWorld}>  
                     <div className={styles.container}>
                         <div className={`ms-Grid-row ms-bgColor-themeSecondary ms-fontColor-white ${styles.row}`}>
-                            {this.state.step < 1 &&
-                                <span className="ms-font-xl ms-fontColor-white"><b>Create a group for your client! Click NEXT to begin.</b></span>
+                            {this.state.step == 0 &&
+                                <p className="ms-font-xl ms-fontColor-white">
+                                    <b>Create a group for your client! Click NEXT to begin.</b>
+                                </p>
                             }
                             {this.state.step == 1 &&
-                                <StepOne />
+                                <StepOne 
+                                    spHttpClient={this.props.spHttpClient}
+                                    siteUrl={this.props.siteUrl}
+                                />
                             }
                             {this.state.step == 2 &&
                                 <StepTwo />
@@ -59,6 +64,7 @@ export default class Main extends React.Component<any, any> {
         );
     }
 
+//TAKES YOU TO THE NEXT STEP
     private previousStep(): void {
         this.setState({
             step: this.state.step - 1
@@ -66,6 +72,7 @@ export default class Main extends React.Component<any, any> {
         console.log(this.state.step);
     }
 
+//TAKES YOU TO THE PREVIOUS STEP
     private nextStep(): void {
         this.setState({
             step: this.state.step + 1

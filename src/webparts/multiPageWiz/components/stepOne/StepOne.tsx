@@ -18,13 +18,13 @@ export default class StepOne extends React.Component<any, any> {
 
     public render(): JSX.Element {
 
-        /**const items: JSX.Element[] = this.state.listItems.map(
+        const items: JSX.Element[] = this.state.listItems.map(
             (item: IListItem, i: number): JSX.Element => {
                 return (
                     <option value={item.Title}>{item.Title}</option>
                 );
             }   
-        ); **/
+        );
 
         return (
             <div>
@@ -35,6 +35,7 @@ export default class StepOne extends React.Component<any, any> {
                         </span>
                     </div>
                     <select>
+                        {items}
                     </select>
                 </div>
             </div>
@@ -43,7 +44,8 @@ export default class StepOne extends React.Component<any, any> {
 
     private readItems(): void {
         this.props.spHttpClient.get(`${this.props.siteUrl}/_api/web/lists/getbytitle('Clients')/items?$select=Title`,
-        SPHttpClient.configurations.v1, {
+        SPHttpClient.configurations.v1,
+        {
             headers: {
             'Accept': 'application/json;odata=nometadata',
             'odata-version': ''
