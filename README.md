@@ -102,7 +102,7 @@ SPHttpClient.configurations.v1, {
 ```
 
 Note that this.props.siteUrl is the url of the site you are currently at.
-‘Clients’ in the API is the name of my list that I am fetching. /items?$select=Title fetches the title column in the list. That’s sufficient , as we only need client names.
+‘Clients’ in the API is the name of my list that I am fetching. ```/items?$select=Title``` fetches the title column in the list. That’s sufficient , as we only need client names.
 HttpClientConfigurations.v1 provides standard predefined HttpClientConfiguration objects for use with the HttpClient class. You can read about the sp-http classes here.
 
 4.4. Then add a response. Simply put it after spHttpClient.get:
